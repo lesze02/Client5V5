@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.home-container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #242424;
+    position: relative;
+    padding: 20px;
+}
+
+.home-container h1 {
+    font-size: 3.5rem;
+    color: #ffffff;
+    margin: 120px 0 50px 0;
+    letter-spacing: 8px;
+    font-weight: 700;
+}
+
+.home-container h2 {
+    color: #888888;
+    font-size: 1rem;
+    margin: 40px 0 20px 0;
+    font-weight: 400;
+}
+
+.home-login {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background: transparent;
+    border: 1px solid #555;
+    color: #aaa;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    z-index: 1000;
+}
+
+.home-login:hover {
+    border-color: #fff;
+    color: #fff;
+}
+
+.home-new-game,
+.home-table {
+    width: 250px;
+    padding: 16px 0;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin: 10px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.home-new-game {
+    background: #ffffff;
+    color: #121212;
+    border: none;
+}
+
+.home-new-game:hover {
+    background: #e0e0e0;
+}
+
+.home-table {
+    background: transparent;
+    border: 1px solid #555;
+    color: #ffffff;
+}
+
+.home-table:hover {
+    border-color: #fff;
+}
+
+.active-matches {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 500px;
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 0 10px;
+    margin-bottom: 50px;
+}
+
+/* Scrollbar styling */
+.active-matches::-webkit-scrollbar {
+    width: 8px;
+}
+
+.active-matches::-webkit-scrollbar-track {
+    background: #1a1a1a;
+    border-radius: 4px;
+}
+
+.active-matches::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 4px;
+}
+
+.active-matches::-webkit-scrollbar-thumb:hover {
+    background: #777;
+}
+
+.match-item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px 24px;
+    background-color: #1a1a1a;
+    border: 1px solid #555;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.match-item:hover {
+    border-color: #fff;
+    background-color: #2a2a2a;
+}
+
+.match-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.match-game {
+    font-weight: 600;
+    color: #4ade80;
+    font-size: 1rem;
+}
+
+.match-score {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.match-id {
+    color: #888;
+    font-size: 0.85rem;
+}
+
+.match-players {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.8rem;
+    color: #aaa;
+    flex-wrap: wrap;
+}
+
+.match-team-players {
+    flex: 1;
+    text-align: center;
+    min-width: 120px;
+    word-wrap: break-word;
+    line-height: 1.3;
+}
+
+.team-a-players {
+    color: #4ade80;
+}
+
+.team-b-players {
+    color: #f87171;
+}
+
+.vs-text {
+    color: #666;
+    font-weight: 600;
+    font-size: 0.7rem;
+    padding: 0 5px;
+    flex-shrink: 0;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    .home-container {
+        padding: 15px;
+    }
+    
+    .home-container h1 {
+        font-size: 2.5rem;
+        margin: 80px 0 30px 0;
+        letter-spacing: 4px;
+    }
+    
+    .home-new-game,
+    .home-table {
+        width: 200px;
+        padding: 14px 0;
+        font-size: 1rem;
+    }
+    
+    .active-matches {
+        max-width: 100%;
+        max-height: 350px;
+    }
+    
+    .match-item {
+        padding: 14px 18px;
+    }
+    
+    .match-players {
+        font-size: 0.75rem;
+    }
+    
+    .match-team-players {
+        min-width: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .match-players {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+    
+    .match-team-players {
+        min-width: unset;
+        width: 100%;
+    }
+    
+    .vs-text {
+        padding: 0;
+    }
+}
