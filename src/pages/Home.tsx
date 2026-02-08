@@ -4,20 +4,20 @@ import '../styles/Home.css';
 // import { apiUrl } from '../config/api';
 // import logo from '../assets/logo.png';
 
-interface PlayerStats {
-    player_id: number;
-    player_name?: string;
-    team: string;
-}
+// interface PlayerStats {
+//     player_id: number;
+//     player_name?: string;
+//     team: string;
+// }
 
-interface MatchData {
-    id: number;
-    game: string;
-    status: string;
-    Ascore: number;
-    Bscore: number;
-    players?: { teamA: string[]; teamB: string[] };
-}
+// interface MatchData {
+//     id: number;
+//     game: string;
+//     status: string;
+//     Ascore: number;
+//     Bscore: number;
+//     players?: { teamA: string[]; teamB: string[] };
+// }
 
 export default function Home() {
     // const navigate = useNavigate();
